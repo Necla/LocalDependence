@@ -26,7 +26,7 @@ setwd("C:/Users/Necla/Desktop/NeclaKochan/rectangularcodes") #change accordingly
 source("QTBC.R")
 source("AX_y.R")
 source("AY_x.R")
-source("H.R")
+source("L.R")
 
 # Correlation regularization
 library(corpcor)
@@ -163,8 +163,8 @@ for(i in 1:length(n)) {
                         S[[1]] <- S[[2]] <- matrix(0, n[i], n[i])
                         
                         for (k in 1:n[i]){
-                                S[[1]][k,] <- as.numeric(lapply(1:n[i], function(s) {H(C.transpose[[1]][,k], C.transpose[[1]][,s], x=y1[k], y=y1[s])}))
-                                S[[2]][k,] <- as.numeric(lapply(1:n[i], function(s) {H(C.transpose[[2]][,k], C.transpose[[2]][,s], x=y2[k], y=y2[s])}))
+                                S[[1]][k,] <- as.numeric(lapply(1:n[i], function(s) {L(C.transpose[[1]][,k], C.transpose[[1]][,s], x=y1[k], y=y1[s])}))
+                                S[[2]][k,] <- as.numeric(lapply(1:n[i], function(s) {L(C.transpose[[2]][,k], C.transpose[[2]][,s], x=y2[k], y=y2[s])}))
                                 
                                 
                         }
