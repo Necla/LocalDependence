@@ -1,4 +1,4 @@
-# classification with NBZScore 
+# classification with NBZScore from qtQDA package 
 
 QTBC<- function(y, prior.prob, coefficients, dispersion, Sigma)
   #  For a vector of genewise counts, compute posterior probability
@@ -9,9 +9,7 @@ QTBC<- function(y, prior.prob, coefficients, dispersion, Sigma)
   #  mean       : list of NB mean vectors for y, one for each subtype
   #  dispersion : list of NB dispersion vectors for y, one for each subtype
   #  Sigma      : list of correlation matrices, one for each subtype
-  
-  #  Gordon Smyth
-  #  5 Nov 2018
+ 
 {
   nsubtypes <- length(prior.prob)
   LogLik <- rep(0,nsubtypes)
